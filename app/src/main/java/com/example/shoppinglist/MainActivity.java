@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
 
 
         //HARDCODED DEFAULTS
-        loadList(items);
+        loadList();
 
         items.sort(Comparator.comparing(Item::getCategory).thenComparing(Item::getName));
 
@@ -288,8 +288,8 @@ public class MainActivity extends AppCompatActivity implements Serializable {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void loadList(ArrayList<Item> items){
-        if (items.isEmpty()){
+    private void loadList(){
+        if (items.isEmpty() || items.equals(null)){
             items.add(new Item("CANNED CORN",CANNED));
             items.add(new Item("CANNED PEAS",CANNED));
             items.add(new Item("CANNED TOMATOES",CANNED));
@@ -402,7 +402,8 @@ public class MainActivity extends AppCompatActivity implements Serializable {
 
 
 
-    protected void onDestroy (){
+    protected void onStop () {
+
         String path = getApplicationContext().getFilesDir().toString() + "/output.txt";
         File f = new File(path);
         try {
@@ -411,10 +412,10 @@ public class MainActivity extends AppCompatActivity implements Serializable {
             oos.writeObject(items);
             oos.flush();
             oos.close();
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
-        super.onDestroy();
+        super.onStop();
 
     }
 
