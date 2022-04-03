@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infoActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26dp"
+        android:text="Categories"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/titleText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories aren't strictly necessary."
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lineOne"
+        android:layout_below="@+id/titleText"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When creating a category, it will be sorted alphabetically"
+        android:textSize="15dp"
+        android:id="@+id/lineTwo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lineOne"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can change the categories by holding the item"
+        android:textSize="15dp"
+        android:id="@+id/lineThree"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lineTwo"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here's the list of existing categories at the moment"
+        android:textSize="15dp"
+        android:id="@+id/lineFour"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lineThree"
+        android:layout_marginTop="20dp"
+        />
+
+    <ListView
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/lineFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryList"/>
+
+
+
+
+
+
+
+</RelativeLayout>

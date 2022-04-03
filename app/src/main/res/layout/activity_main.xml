@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#56494C">
+
+
+    <RelativeLayout
+
+        android:id="@+id/appHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#56494C">
+
+        <EditText
+
+            android:id="@+id/enterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+
+            android:hint="Enter a new name..." />
+        />
+
+        <EditText
+
+            android:id="@+id/enterCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enterName"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="(Optional) Category..." />
+
+        <ImageView
+            android:id="@+id/infoButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/enterName"
+            android:layout_toRightOf="@id/enterCategory"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <Button
+            android:id="@+id/createItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enterCategory"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#2EBFA5"
+            android:text="CREATE" />
+
+        <Button
+            android:id="@+id/clearList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enterCategory"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="90dp"
+            android:layout_toRightOf="@+id/createItemButton"
+            android:backgroundTint="#136F63"
+            android:text="CLEAR LIST" />
+        />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <ListView
+
+        android:id="@+id/itemList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appHeader"
+        android:background="#847E89"
+        />
+
+</RelativeLayout>
