@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#56494C">
+    android:background="#FABC3C">
 
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:id="@+id/appHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#56494C">
+        android:background="#FABC3C">
 
         <EditText
 
@@ -53,7 +53,7 @@
             android:layout_below="@+id/enterCategory"
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
-            android:backgroundTint="#2EBFA5"
+            android:backgroundTint="#E08A00"
             android:text="CREATE"
             android:layout_marginLeft="10dp"/>
 
@@ -65,7 +65,7 @@
             android:layout_below="@+id/enterCategory"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:backgroundTint="#136F63"
+            android:backgroundTint="#F19143"
             android:text="CLEAR LIST" />
         />
 
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/appHeader"
-        android:background="#847E89"
+        android:background="#F55536"
         />
 
 </RelativeLayout>

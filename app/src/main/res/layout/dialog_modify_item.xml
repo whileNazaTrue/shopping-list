@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="50dp"
-    android:background="#56494C">
+    android:background="#F19143">
 
     <TextView
         android:id="@+id/nameChangeText"
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:backgroundTint="#2EBFA5"
+        android:backgroundTint="#FABC3C"
         android:text="SET NAME"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
         android:id="@+id/buttonSetNewCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2EBFA5"
+        android:backgroundTint="#FABC3C"
         android:text="SET CATEGORY"
         app:layout_constraintBottom_toTopOf="@+id/buttonDeleteItem"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
         android:id="@+id/buttonDeleteItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#136F63"
+        android:backgroundTint="#F55536"
         android:text="DELETE ITEM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

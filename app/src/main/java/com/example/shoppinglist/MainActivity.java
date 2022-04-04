@@ -1,7 +1,5 @@
 package com.example.shoppinglist;
 
-
-
 import static listElements.itemCategory.*;
 
 import androidx.annotation.RequiresApi;
@@ -64,19 +62,12 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         clearList = findViewById(R.id.clearList);
         confirmClear = findViewById(R.id.confirmClearButton);
 
-
-
-
-
-
-
         items = new ArrayList<>();
         loadContent();
 
 
         //HARDCODED DEFAULTS
         loadList();
-
         items.sort(Comparator.comparing(Item::getCategory).thenComparing(Item::getName));
 
 
@@ -94,8 +85,6 @@ public class MainActivity extends AppCompatActivity implements Serializable {
 
 
 
-
-
         elementsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -106,8 +95,6 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                 editor.apply();
             }
         });
-
-
 
 
         elementsList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
