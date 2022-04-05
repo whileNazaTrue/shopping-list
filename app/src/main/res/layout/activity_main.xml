@@ -55,7 +55,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:backgroundTint="#E08A00"
-            android:text="   CREATE   "
+            android:text=" CREATE "
             android:textAlignment="center" />
 
         <Button
@@ -65,7 +65,7 @@
             android:layout_below="@+id/enterCategory"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:layout_marginRight="10dp"
+
             android:backgroundTint="#D62C0A"
             android:text="CLEAR LIST" />
         />

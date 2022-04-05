@@ -24,7 +24,7 @@ public class Item implements Serializable {
 
     @Override
     public String toString() {
-        return name;
+        return category.substring(0,Math.min(category.length(),3)) + " - " + name;
 
     }
 
