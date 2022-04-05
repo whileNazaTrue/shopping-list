@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     private AlertDialog.Builder dialogClearBuilder;
     private AlertDialog dialogClear;
     private EditText modifyName, modifyCategory;
-    private Button setName, setCategory, deleteItem, clearList, confirmClear;
+    private Button setName, setCategory, deleteItem, clearList, confirmClear, uncheckAll;
     private ListView elementsList;
     private ArrayList<Item> items;
     private ArrayAdapter<Item> adapter;
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         infoButton = findViewById(R.id.infoButton);
         clearList = findViewById(R.id.clearList);
         confirmClear = findViewById(R.id.confirmClearButton);
+        uncheckAll = findViewById(R.id.uncheckAll);
 
         items = new ArrayList<>();
         loadContent();
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(MainActivity.this, "Removing "+items.get(i).getName(), Toast.LENGTH_SHORT).show();
-
+                        elementsList.setItemChecked(i,false);
                         items.remove(i);
                         adapter.notifyDataSetChanged();
                         dialog.dismiss();
@@ -166,7 +167,14 @@ public class MainActivity extends AppCompatActivity implements Serializable {
             }
         });
 
-
+        uncheckAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uncheckAll();
+                adapter.notifyDataSetChanged();
+                Toast.makeText(MainActivity.this, "Unchecked everything!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         enterButton.setOnClickListener(new View.OnClickListener() {
@@ -206,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                 confirmClear.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        uncheckAll();
                         items.clear();
                         adapter.notifyDataSetChanged();
                         dialogClear.dismiss();
@@ -360,6 +368,17 @@ public class MainActivity extends AppCompatActivity implements Serializable {
             items.add(new Item("CELERY",VEGETABLE));
 
             items.sort(Comparator.comparing(Item::getCategory).thenComparing(Item::getName));
+        }
+    }
+
+    public void uncheckAll(){
+        for (int i = 0; i < items.size(); i++) {
+            elementsList.setItemChecked(i,false);
+
+            SharedPreferences pref = getSharedPreferences("credentials",Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean(items.get(i).getName(),elementsList.isItemChecked(i));
+            editor.apply();
         }
     }
 
