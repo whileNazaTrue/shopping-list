@@ -1,6 +1,6 @@
 # shopping-list
-Simple shopping list made in Java.
-
+Simple shopping list made in Java for Android.
+ 
 
 ABOUT THIS APP
 
